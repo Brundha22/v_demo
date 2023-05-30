@@ -1,0 +1,217 @@
+
+
+    <!-- <link rel="stylesheet" href="booking.component.css"> -->
+    <html>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <h2 id="head1" style="text-align: center;"><b>Birthday Event</b></h2>
+  <h2  class="p-3 mb-2 bg-dark text-white" id="head"> &nbsp;&nbsp; Book Event &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn"><b>View Booked event</b></button > &nbsp;&nbsp;&nbsp;<button class="btn"><b>Logout &nbsp;<i class="fa fa-sign-out" style="font-size:15px"></i></b></button></h2>
+  
+  <body>
+    <br/>
+    <!-- <br/> -->
+        <div class="container">
+            <link rel="stylesheet" href="booking.component.css">
+            <!-- <header> Book Event Details </header> -->
+            <div *ngIf="currentPage === 1">
+              <form>
+            <!-- <form action="#" #BookEvent="ngForm" (ngsubmit)="submit(BookEvent)"> -->
+                <div class="form first">
+                    <div class="details event">
+                        <span class="title" class="btn4"><b>Event Details</b></span>
+                        <br/><br/>
+                        <div class="fields">
+                            <div class="form-group; mb-3 row">
+                                <label for="eventName" class="col-sm-2 col-form-label">Event Name</label><br>
+                                <div class="col-sm-4">
+                                <input type="text" name="eventName" [(ngModel)]="formData.eventName" class="form-control" placeholder="Enter event name" required="" ngModel>
+                                </div>
+                                <label for="applicantName" class="col-sm-2 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Applicant name</label><br>
+                                <div class="col-sm-4">
+                                <input type="text" name="applicantName" [(ngModel)]="formData.applicantName" class="form-control" placeholder="Enter your name" required="" ngModel>
+                                </div>
+                            </div>
+
+                            <div class="form-group; mb-3 row">
+                                <label for="applicantName" class="col-sm-2 col-form-label">Applicant name</label><br>
+                                <div class="col-sm-4">
+                                <input type="text" name="applicantName" [(ngModel)]="formData.applicantName" class="form-control" placeholder="Enter your name" required="" ngModel>
+                                </div>
+                                <label for="applicantAddress" class="col-sm-2 col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Applicant Address</label><br>
+                                <div class="col-sm-4">
+                                <input type="text" name="applicantAddress" [(ngModel)]="formData.applicantAddress" class="form-control" placeholder="Enter your permanent address" required="" ngModel>
+                                </div>
+                            </div>
+
+                            <!-- <div class="form-group; mb-3 row">
+                                <label for="applicantAddress" class="col-sm-2 col-form-label">Applicant Address</label><br>
+                                <div class="col-sm-10">
+                                <input type="text" name="applicantAddress" [(ngModel)]="formData.applicantAddress" class="form-control" placeholder="Enter your permanent address" required="" ngModel>
+                                </div>
+                            </div> -->
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="applicantMobileNo" class="col-sm-2 col-form-label">Applicant Mobile Number</label><br>
+                                <div class="col-sm-10">
+                                <input type="text" name="applicantMobileNo" [(ngModel)]="formData.applicantMobileNo" class="form-control" placeholder="Enter your mobile number" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="applicantEmailId" class="col-sm-2 col-form-label">Applicant Email Id</label><br>
+                                <div class="col-sm-10">
+                                <input type="email" name="applicantEmailId" [(ngModel)]="formData.applicantEmailId" class="form-control" placeholder="Enter your email Id" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="eventAddress" class="col-sm-2 col-form-label">Event Location</label><br>
+                                <div class="col-sm-10">
+                                <input type="text"  name="eventAddress" [(ngModel)]="formData.eventAddress" class="form-control" placeholder="Enter location of event" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="eventDate" class="col-sm-2 col-form-label">Event Date</label><br>
+                                <div class="col-sm-10">
+                                <input type="date"  name="eventDate" [(ngModel)]="formData.eventDate" class="form-control" placeholder="Enter date of event" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="eventTime" class="col-sm-2 col-form-label">Event Time</label><br>
+                                <div class="col-sm-10">
+                                <input type="time"  name="eventTime" [(ngModel)]="formData.eventTime" class="form-control" placeholder="Enter the time of event" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="noOfPeople" class="col-sm-2 col-form-label">People Count</label><br>
+                                <div class="col-sm-10">
+                                <input type="text"  name="noOfPeople" [(ngModel)]="formData.noOfPeople" class="form-control" placeholder="Enter number of people" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <!-- <button class="nextBtn">
+                                <span class="btnText" (click)="nextPage()" class="btn">Next Page</span>
+                                <i class="uil uil-navigator"></i>
+                            </button> -->
+                            <button type="button"  (click)="nextPage()" class="btn" class="btn btn-secondary"><b>NextPage</b></button>
+                        </div>
+                        <!-- <button (click)="nextPage()" class="btn" ><b>Next Page</b></button> -->
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group me-2" role="group" aria-label="First group">
+                              <button type="button" class="btn btn-primary" class="btn" *ngIf="currentPage==1" disabled><b>1</b></button>&nbsp;&nbsp;
+                              <button type="button"  (click)="nextPage()" class="btn" class="btn btn-secondary"><b>2</b></button>
+                            </div>                        
+                        </div>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                </form></div>
+            
+                <div *ngIf="currentPage === 2">
+                    <form action="#" #BookEvent="ngForm" >
+                <div class="form second">
+                    <div class="details food and addOns">
+                        <span class="title" class="btn4" ><b>Food Catering Details</b></span>
+                        <br/><br/>
+                        <div class="fields">
+                            <div class="form-group; mb-3 row">
+                                <label for="selectFoodCategory" class="col-sm-2 col-form-label">Food Type</label><br>
+                                <!-- <div class="col-sm-4">
+                                <select name="selectFoodCategory" class="form-control" multiple="" [(ngModel)]="formData.foodmenu" name="foodmenu" ngModel>
+                                    <option disabled="" selected="" name="" class="form-control">Select the category (Hold shift to select more than one)</option>
+                                    <option name="" class="form-control">Chapathi       50</option>
+                                    <option name="" class="form-control">Pizza          150</option>
+                                    <option name="" class="form-control">Sandwich       75</option>
+                                    <option name="" class="form-control">Gulab Jamun    30</option>
+                                </select>
+                                </div> -->
+                                <ng-multiselect-dropdown
+  [placeholder]="'custom placeholder'"
+  [settings]="dropdownSettings"
+  [data]="dropdownList"
+  [(ngModel)]="selectedItems"
+  (onSelect)="onItemSelect($event)"
+  (onSelectAll)="onSelectAll($event)"
+>
+</ng-multiselect-dropdown>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="quantityOfVeg" class="col-sm-2 col-form-label" >Quantity of Veg Items</label><br>
+                                <div class="col-sm-10">
+                                <input type="number"  name="quantityOfVeg" class="form-control" name="Quantity" [(ngModel)]="formData.Quantity" required="" ngModel placeholder="Enter Quantity of Veg items" required="" ngModel>
+                                </div>
+                            </div>
+    
+                            <div class="form-group; mb-3 row">
+                                <label for="quantityOfNonVeg" class="col-sm-2 col-form-label" >Quantity of Non Veg Items</label><br>
+                                <div class="col-sm-10">
+                                <input type="number"  name="quantityOfNonVeg" class="form-control" name="non_Quantity" [(ngModel)]="formData.non_Quantity" placeholder="Enter Quantity of Non veg items" required="" ngModel>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="details AddOn">
+                        <b><span class="title" class="btn4"><b>AddOn Details</b></span></b>
+    <br/><br/>
+                        <div class="fields">
+                            <div class="form-group; mb-3 row">
+                                <label for="selectAddOnsCategory" class="col-sm-2 col-form-label">Select Addon</label><br>
+                                <div class="col-sm-10">
+                                    <select name="selectAddOnsCategory" class="form-select" multiple aria-label="Default select example" multiple="multiple"  [(ngModel)]="formData.AddOn" name="Addon" ngModel>
+                                        <option disabled="" selected="" name="" class="form-control" >Select the category (Hold shift to select more than one)</option>
+                                        <option name="" class="form-control" >Mehandi    2500</option>
+                                        <option name="" class="form-control">Magic Show 2500</option>
+                                        <option name="" class="form-control">Dj Party   2500</option>
+                                        <option name="" class="form-control">Game Show  2500</option>
+                                    </select>
+                                   
+                                      <!-- <select class="form-select" multiple aria-label="multiple select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select> -->
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- <div class="buttons"> -->
+                            <!-- <div class="backBtn"> -->
+                                <!-- <button class="nextBtn">
+                                    <span class="btnText" (click)="previousPage()" class="btn">Back</span>
+                                    <i class="uil uil-navigator"></i>
+                                </button> -->
+                                <!-- <button (click)="previousPage()" class="btn"><b>Back</b></button> -->
+                                <button type="button" (click)="previousPage()" class="btn btn-secondary" class="btn"><b>Back</b></button>&nbsp;&nbsp;
+                            <!-- </div>
+                             -->
+                             <div>
+    <!-- <button (click)="previousPage()">Back</button> -->
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group me-2" role="group" aria-label="First group">
+                                  <button type="button" (click)="previousPage()" class="btn btn-secondary" class="btn"><b>1</b></button>&nbsp;&nbsp;
+                                  <button type="button" class="btn btn-primary" class="btn" *ngIf="currentPage==2" disabled ><b>2</b></button>
+                                  <!-- <button (click)="previousPage()">Page 1</button> -->
+                                  <!-- <button (click)="nextPage()">Book the Event</button> -->
+                                </div>                        
+                            </div>
+                            
+                            <button class="btn btn-outline-primary" id="btn1" type="submit" (click)="submit(BookEvent)">
+                                <b>Book Event</b>
+                            </button>
+                            <br/>
+                            <br/><br/>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+        </div>
+    
+    </div>
+    </body>
+    </html>
