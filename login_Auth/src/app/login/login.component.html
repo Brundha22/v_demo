@@ -1,0 +1,20 @@
+
+<form>
+    <h3  style="text-align:center;font-weight: 700;"> UserLogin </h3>
+    <br/>
+    <div class="form-group col-md-3" style="margin-left: 550px;">
+      <label for="inputEmail4" >Username</label>
+      <br/>
+      <br/>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Username" [(ngModel)]="username" name="username">
+      <br/>
+      <br/>
+      <label for="inputEmail4" >Password</label>
+      <br/>
+      <br/>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="password" [(ngModel)]="password" name="password">
+      <br/>
+      <br/>
+      <button class="btn btn-primary"  style="margin-left: 145px;" (click)="login()" > Login </button>
+    </div>
+  </form>

@@ -1,0 +1,24 @@
+
+  <div id="box">
+    <h1 style="margin-top:100px;text-align: center;font-family:Georgia, 'Times New Roman', Times, serif">   User {{ heading }} </h1>
+    <div  style="margin-left: 100px;">
+    <label id="label"style="text-align: center;font-family:Georgia, 'Times New Roman', Times, serif">Username</label>
+    <input type="text" class="input" placeholder="Enter name..!" [(ngModel)]="name"/>
+    <br/>
+    <br/>
+    <label id="label" style="text-align: center;font-family:Georgia, 'Times New Roman', Times, serif"> Password </label>
+    <input type="password" class="input" placeholder="Enter password..!" [(ngModel)]=" password" />
+    <br/>
+    <br/>
+    <button id="but1" style="text-align: center;font-family:Georgia, 'Times New Roman', Times, serif"  (click)="submitform()">Submit</button>
+  </div>
+  </div>
+
+  <!-- <app-home-component></app-home-component> -->
+  <router-outlet></router-outlet>
+
+
+
+
+
+

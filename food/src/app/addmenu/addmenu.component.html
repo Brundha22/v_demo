@@ -1,0 +1,31 @@
+<html>
+  <h2  class="p-3 mb-2 bg-dark text-white" id="head"> &nbsp;&nbsp; Food Menu </h2>
+  <body>
+<button class="btn btn-dark" id="btn"(click) = "add()">Add Item</button>
+<br/>
+<br/>
+<table id="table" class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Item Image </th>
+            <th>Item Name </th>
+            <th>Item Category </th>
+            <th>Item price </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of addmenus">
+            <td><img src = "{{item.foodMenuImage}}"  height="100" width="100"></td>
+            <td>{{item.foodMenuItems}}</td>
+            <td>{{item.foodMenuType}}</td>
+            <td>{{item.foodMenuCost}}</td>
+            <td>
+                <button  class="btn btn-warning" (click) = "updateFoodMenu(item.foodMenuID)"> Update </button> &nbsp; &nbsp;
+                <button class="btn btn-danger" (click) = "deleteFoodMenu(item.foodMenuID)"> Delete </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

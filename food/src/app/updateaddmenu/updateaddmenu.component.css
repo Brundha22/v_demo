@@ -1,0 +1,24 @@
+body{
+    width:1535px;
+    margin-left:-114px;
+    height:1300px;
+    margin-top:-7px;
+    /* background-color: rgb(156, 156, 242) */
+    /* background-image: linear-gradient( rgb(247, 137, 156),rgb(131, 247, 131)); */
+    /* background-image: linear-gradient(45 deg,blue,red); */
+    background-image: linear-gradient(to right top,#051937,#004d7a,#00bf72,#a8eb12);
+ }
+
+ #head1{
+    text-align: center;
+    width: 1620px;
+    margin-left: -340px;
+ }
+
+
+ #btn{
+   background-image: linear-gradient(rgb(74, 237, 237),rgb(13, 177, 13));
+   color:black;
+   border: 2px solid black;
+   border-radius: 5px;
+ }

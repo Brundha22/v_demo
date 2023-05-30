@@ -1,0 +1,39 @@
+#head{
+    margin-left:-10px;
+    width:1550px;
+}
+.btn{
+    background-image: linear-gradient(to right,pink,grey);
+    /* border:2px solid white; */
+    border-radius: 5px;
+    color:black;
+    transition-duration: 0.4s;
+
+}
+
+
+
+.btn:hover{
+    color:white;
+    background-image: linear-gradient(to right,grey,pink);
+    /* background-image: linear-gradient(rgb(122, 238, 238),rgb(113, 207, 113)); */
+}
+
+#form{
+    margin-left:100px;
+    margin-top:50px;
+}
+/* 
+#bord{
+    border:2px solid black;
+    border-radius: 5px;
+} */
+
+html,body{
+    background-image: linear-gradient(to right,rgb(29, 159, 159),rgb(170, 247, 170),lightgreen);
+}
+
+#next{
+    margin-left:1290px;
+}
+
